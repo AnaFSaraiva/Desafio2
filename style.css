@@ -1,90 +1,161 @@
 body {
   margin: 0;
-  background: rgb(248, 120, 0);
   font-family: 'Graphik', sans-serif;
+  background: rgb(248, 120, 0);
 }
 
-.GB-Bank {
-  box-sizing: border-box;
-  max-width: 100vw;
-  /* max-width: 1250px; */
+.gb-bank {
+  background: url(https://nubank.com.br/images-cms/1664201016-home-nubank-mob.jpg?w=360&dpr=1&auto=compress&q=30);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
   margin: 0 auto;
+  padding: 15px;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1.7rem;
   margin: 0 0 25px 0;
   font-weight: 500;
 }
 
 h2 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin: 0 0 25px 0;
   font-weight: 500;
-  /* line-height: 1rem; */
+  line-height: 1.4rem;
 }
 
 h3 {
-  font-size: 25px;
+  font-size: 1.2rem;
   margin: 0 0 50px 0;
   font-weight: 500;
 }
 
-.container-GBbank {
-  width: 100%;
-  height: 100vh;
-  /* display: flex;*/
-  /* flex-wrap: wrap; */
-  /* justify-content: space-between; */
-  /* align-items: center; */
-}
-
 .lado-esquerdo {
-  color: aliceblue;
-  /* width: 38%; */
+  color: #ffffff;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  margin: 20px;
+  margin-bottom: 80px;
 }
 
 .lado-direito {
-  /* max-width: 25%; */
   width: 100%;
-  background: #f3f3f3;
+  max-width: 350px;
+  background: #ffffff;
   padding: 25px;
   border-radius: 20px;
-  line-height: 1.32
+  line-height: 1.32;
+  margin: 0 auto;
 }
 
 .entrada-cpf {
   width: 100%;
-  font-size: 18px;
+  font-size: 16px;
   margin: 10px 0;
-  padding: 5px 0;
+  padding: 5px 5px;
   border: none;
   border-bottom: 1px solid #979797;
-
 }
 
+.entrada-cpf:focus {
+  outline: none;
+}
+
+.label-cpf {
+  font-size: 0.7rem;
+  color: #8a8989;
+}
+
+
 .continuar {
+  font-family: inherit;
   display: flex;
   flex-direction: row;
   width: 100%;
+  height: 50px;
   align-items: center;
   justify-content: space-between;
   margin: 17px 0;
-  padding: 0 30px;
-  font-weight: 500;
-  border-radius: 40px;
-  background: rgb(37, 37, 133);
-}
-
-.entrada-cpf:active {
+  padding: 0 25px;
+  border-radius: 25px;
+  background: rgba(130, 10, 289, 1);
   border: none;
 }
 
-.container-GBbank p {
-  font-weight: 300;
+.continuar:disabled {
+  background: #e9e9e9;
+  cursor: not-allowed;
+}
+
+.continuar:disabled spam {
+  color: #b1b1b1;
+}
+
+.continuar spam {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+
+  .gb-bank {
+    background: url(https://nubank.com.br/images-cms/1664381507-home-nubank-tab.jpg?w=768&dpr=2&auto=compress&fm=webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .lado-direito {
+    margin-right: 0;
+  }
+
+  .lado-esquerdo {
+    width: 510px;
+  }
+}
+
+@media (min-width: 1150px) {
+
+  .gb-bank {
+    background: url(https://nubank.com.br/images-cms/1664201099-home-nubank.jpg?w=1152&dpr=1&auto=compress&fm=webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .container-gbbank {
+    width: 94%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .lado-esquerdo {
+    color: rgb(255, 255, 255);
+    width: 38%;
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .lado-direito {
+    max-width: 345px;
+  }
 }
