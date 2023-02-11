@@ -16,26 +16,26 @@
 <body>
   <header class="cabecalho">
 
-    <div class="menu-esquerdo">
+    <div class="menu__esquerdo">
 
       <div class="mobile">
 
-        <a href="/" class="menu-logo"><img src="imagens/bank.png" alt="logo do banco"></a>
+        <a href="/" class="menu__logo"><img src="imagens/bank.png" alt="logo do banco"></a>
 
         <button type="button" onClick="clickMenu()">
-          <span id="icon-hamburguer" class="material-symbols-outlined">
+          <span id="icon__hamburguer" class="material-symbols-outlined">
             menu
           </span>
         </button>
 
       </div>
 
-      <nav id="esconde">
-        <ul class="menu">
+      <nav id="nav">
+        <ul class="menu__nav">
 
-          <li class="item"><a href="/">Página Inicial</a></li>
+          <li class="menu__item"><a href="/">Página Inicial</a></li>
 
-          <li class="item"><a href="/">Para você <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+          <li class="menu__item"><a href="/">Para você <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
                 fill="none" viewBox="0 0 20 20" class="sc-qQYBZ dyrgJG sc-pbYBj ccFFpp" color="currentColor" role="img">
                 <title> </title>
                 <g>
@@ -44,7 +44,7 @@
                 </g>
               </svg></a></li>
 
-          <li class="item"><a href="/">Para seu negócio
+          <li class="menu__item"><a href="/">Para seu negócio
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 20 20"
                 class="sc-qQYBZ dyrgJG sc-pbYBj ccFFpp" color="currentColor" role="img">
                 <title> </title>
@@ -55,7 +55,7 @@
               </svg>
             </a></li>
 
-          <li class="item"><a href="/">O GB-Bank <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
+          <li class="menu__item"><a href="/">O GB-Bank <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"
                 fill="none" viewBox="0 0 20 20" class="sc-qQYBZ dyrgJG sc-pbYBj ccFFpp" color="currentColor" role="img">
                 <title> </title>
                 <g>
@@ -64,16 +64,16 @@
                 </g>
               </svg></a></li>
 
-          <li class="item"><a href="/">Perguntas</a></li>
+          <li class="menu__item"><a href="/">Perguntas</a></li>
 
         </ul>
       </nav>
 
     </div>
 
-    <div class="linha">
+    <div class="menu__login">
 
-      <a id="esconde" class="login" href="/">Login <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+      <a id="nav" class=" login" href="/">Login <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
           fill="none" viewBox="0 0 21 20" class="sc-qQYBZ dyrgJG sc-pbYBj ccFFpp" color="currentColor" role="img">
           <title>Login Icon</title>
           <g>
@@ -83,7 +83,7 @@
           </g>
         </svg></a>
 
-      <span class="under"></span>
+      <span class="linha"></span>
 
     </div>
 
@@ -91,18 +91,19 @@
 
   <main class="gb-bank">
 
-    <section class="container-gbbank">
+    <section class="conteudo">
 
-      <div class="lado-esquerdo">
+      <div class="conteudo__esquerdo">
         <h1>O futuro é a razão que a gente faz planos.</h1>
         <h2>Escolha o futuro. Comece a controlar melhor sua vida financeira com o GB-Bank.</h2>
       </div>
 
-      <div class="lado-direito">
+      <div class="conteudo__direito">
         <form class="formulario">
           <h3>Peça sua conta e cartão de crédito do GB-Bank</h3>
           <!-- <label class="label-cpf" for="cpf-numero">Digite seu CPF</label> -->
-          <input class="entrada-cpf" type="tel" name="cpf-numero" maxlength="14" placeholder="Digite seu CPF" required>
+          <input class="formulario__cpf" type="tel" name="cpf-numero" maxlength="14" placeholder="Digite seu CPF"
+            required>
 
           <button class="continuar" type="button" disabled>
             <spam>Continuar</spam>
@@ -119,12 +120,12 @@
   <script>
 
     function clickMenu() {
-      if (esconde[0].style.display == 'block') {
-        esconde[0].style.display = 'none'
-        esconde[1].style.display = 'none'
+      if (nav[0].style.display == 'block') {
+        nav[0].style.display = 'none'
+        nav[1].style.display = 'none'
       } else {
-        esconde[0].style.display = 'block'
-        esconde[1].style.display = 'block'
+        nav[0].style.display = 'block'
+        nav[1].style.display = 'block'
       }
 
     }
