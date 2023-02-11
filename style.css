@@ -10,7 +10,7 @@ body {
   background-position: center;
 
   width: 100%;
-  min-height: 155vh;
+  min-height: 159vh;
   margin: 0 auto;
   padding: 15px;
 
@@ -95,7 +95,6 @@ h3 {
   font-size: 0.7rem;
 
   padding-left: 5px;
-  /* transform: translateY(1.5rem); */
 }
 
 .continuar {
@@ -169,6 +168,11 @@ h3 {
   width: 35px;
   padding: 2px 0;
   margin: auto 0;
+}
+
+.mobile button {
+  background-color: transparent;
+  border: none;
 }
 
 .menu {
@@ -305,6 +309,7 @@ h3 {
 
   .mobile button {
     display: none;
+    background-color: #ffffff;
   }
 
   .menu-logo {
@@ -334,6 +339,10 @@ h3 {
     border-top: none;
   }
 
+  .linha {
+    width: fit-content;
+  }
+
   .login {
     font-size: 1.1rem;
     border-top: none;
@@ -354,7 +363,7 @@ h3 {
   }
 
   #esconde {
-    display: unset;
+    display: block !important;
   }
 
   /*FINAL TRABALHO APARTE DE MENU*/
