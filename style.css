@@ -1,30 +1,37 @@
 body {
   margin: 0;
   font-family: 'Graphik', sans-serif;
-  background: rgb(248, 120, 0);
 }
 
 .gb-bank {
   background: url(https://nubank.com.br/images-cms/1664201016-home-nubank-mob.jpg?w=360&dpr=1&auto=compress&q=30);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+
   width: 100%;
-  min-height: 100vh;
+  min-height: 155vh;
   margin: 0 auto;
   padding: 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
 }
 
 h1 {
-  font-size: 1.7rem;
-  margin: 0 0 25px 0;
+  font-size: 1.8rem;
   font-weight: 500;
+  line-height: 2.2rem;
+
+  margin: 60px 0 20px 0;
 }
 
 h2 {
   font-size: 1.2rem;
-  margin: 0 0 25px 0;
   font-weight: 500;
-  line-height: 1.4rem;
+  line-height: 1.5rem;
 }
 
 h3 {
@@ -37,50 +44,76 @@ h3 {
   color: #ffffff;
   width: 100%;
   margin-bottom: 80px;
+  padding-left: 16px;
 }
 
 .lado-direito {
+  background: #ffffff;
+
+  line-height: 1.32;
+
   width: 100%;
   max-width: 350px;
-  background: #ffffff;
   padding: 25px;
-  border-radius: 20px;
-  line-height: 1.32;
   margin: 0 auto;
+  border-radius: 20px;
 }
 
 .entrada-cpf {
-  width: 100%;
   font-size: 16px;
+
+  width: 100%;
   margin: 10px 0;
   padding: 5px 5px;
   border: none;
   border-bottom: 1px solid #979797;
 }
 
+.entrada-cpf::placeholder {
+  font-family: 'Graphik', sans-serif;
+  font-size: 0.8rem;
+
+  transition: 0.5s;
+}
+
+.entrada-cpf:focus::placeholder {
+  transform: translateY(-1.5rem);
+  font-size: 0.7rem;
+}
+
+.entrada-cpf:hover {
+  border-bottom: 1px solid #000000
+}
+
 .entrada-cpf:focus {
   outline: none;
+  border-bottom: 1px solid #000000
 }
 
 .label-cpf {
-  font-size: 0.7rem;
   color: #8a8989;
-}
+  font-size: 0.7rem;
 
+  padding-left: 5px;
+  /* transform: translateY(1.5rem); */
+}
 
 .continuar {
   font-family: inherit;
-  display: flex;
-  flex-direction: row;
+
+  background: rgba(130, 10, 289, 1);
+
   width: 100%;
   height: 50px;
-  align-items: center;
-  justify-content: space-between;
   margin: 17px 0;
   padding: 0 25px;
   border-radius: 25px;
-  background: rgba(130, 10, 289, 1);
   border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
 .continuar:disabled {
@@ -97,12 +130,97 @@ h3 {
   font-weight: 500;
 }
 
+/*INICIO TRABALHO APARTE DE MENU*/
+.cabecalho {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+
+}
+
+.cabecalho a {
+  padding: 5px 0;
+  text-decoration: none;
+  font-weight: 500;
+  text-align: center;
+}
+
+.mobile {
+  width: 100vw;
+  height: 65px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#icon-hamburguer {
+  cursor: pointer;
+  padding: 8px;
+}
+
+.menu-logo {
+  color: black;
+}
+
+.menu-logo img {
+  width: 35px;
+  padding: 2px 0;
+  margin: auto 0;
+}
+
+.menu {
+  color: #000;
+  width: 100vw;
+}
+
+.item a {
+  display: block;
+  color: #000;
+  width: 100%;
+}
+
+.item+.item {
+  border-top: 1px solid rgba(130, 10, 289, 1);
+}
+
+
+.item svg {
+  fill: #000;
+  margin-left: 8px
+}
+
+.linha {
+  width: 100%;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(130, 10, 289, 1);
+  border-top: 1px solid rgba(130, 10, 289, 1);
+}
+
+.login svg {
+  margin-left: 5px;
+}
+
+#esconde {
+  display: none;
+}
+
+/*FINAL TRABALHO APARTE DE MENU*/
+
 @media (min-width: 768px) {
 
   .gb-bank {
     background: url(https://nubank.com.br/images-cms/1664381507-home-nubank-tab.jpg?w=768&dpr=2&auto=compress&fm=webp);
     background-repeat: no-repeat;
     background-size: cover;
+    min-height: 100vh;
   }
 
   h1 {
@@ -134,7 +252,8 @@ h3 {
     background: url(https://nubank.com.br/images-cms/1664201099-home-nubank.jpg?w=1152&dpr=1&auto=compress&fm=webp);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: top center;
+    min-height: 100vh;
   }
 
   .container-gbbank {
@@ -158,4 +277,86 @@ h3 {
   .lado-direito {
     max-width: 345px;
   }
+
+  /*INICIO TRABALHO APARTE DE MENU NO QUERY*/
+
+
+  .cabecalho {
+    height: 60px;
+    font-size: 1rem;
+    padding: 0 35px 0 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .cabecalho a {
+    padding: 8px;
+  }
+
+  .menu-esquerdo {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .mobile {
+    width: unset;
+  }
+
+  .mobile button {
+    display: none;
+  }
+
+  .menu-logo {
+    color: black;
+  }
+
+  /* #icon-hamburguer {
+    display: none;
+  } */
+
+  .menu-logo img {
+    padding: 0;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 700px;
+    height: 100%;
+    flex-grow: 1;
+    margin-left: 22px;
+  }
+
+  .item+.item {
+    border-top: none;
+  }
+
+  .login {
+    font-size: 1.1rem;
+    border-top: none;
+    width: 100px;
+  }
+
+  .under {
+    display: block;
+    width: 0px;
+    height: 2px;
+    margin: 4px 0 0 0;
+    background: rgba(130, 10, 289, 1);
+    transition: 0.5s
+  }
+
+  .linha:hover .under {
+    width: 100%;
+  }
+
+  #esconde {
+    display: unset;
+  }
+
+  /*FINAL TRABALHO APARTE DE MENU*/
+
 }
