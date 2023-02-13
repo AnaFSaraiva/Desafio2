@@ -73,7 +73,7 @@
 
     <div class="menu__login">
 
-      <a id="nav" class=" login" href="/">Login <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+      <a id="login" class=" login" href="/">Login <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
           fill="none" viewBox="0 0 21 20" class="sc-qQYBZ dyrgJG sc-pbYBj ccFFpp" color="currentColor" role="img">
           <title>Login Icon</title>
           <g>
@@ -82,8 +82,6 @@
               fill="rgba(130, 10, 289, 1)"></path>
           </g>
         </svg></a>
-
-      <span class="linha"></span>
 
     </div>
 
@@ -120,14 +118,17 @@
   <script>
 
     function clickMenu() {
-      if (nav[0].style.display == 'block') {
-        nav[0].style.display = 'none'
-        nav[1].style.display = 'none'
+      if (nav.style.display == 'block') {
+        nav.style.display = 'none'
       } else {
-        nav[0].style.display = 'block'
-        nav[1].style.display = 'block'
+        nav.style.display = 'block'
       }
 
+      if (login.style.display == 'block') {
+        login.style.display = 'none'
+      } else {
+        login.style.display = 'block'
+      }
     }
 
   </script>
